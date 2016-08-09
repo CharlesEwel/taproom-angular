@@ -9,9 +9,9 @@ import {Keg} from './keg.model';
         <h3>Create Keg:</h3>
         <input placeholder="Name" #newName>
         <input placeholder="Brand" #newBrand>
-        <input type="number" placeholder="Price" #newPrice>
+        <span class="currencyinput">$<input type="number" placeholder="Price" #newPrice></span>
         <input type="number" placeholder="ABV" #newABV>
-        <button (click)="addKeg(newName, newBrand, newPrice, newABV)" class="add-button btn-lg">Add</button>
+        <button (click)="addKeg(newName, newBrand, newPrice, newABV)" class="add-button">Add</button>
       </div>
   `
 })

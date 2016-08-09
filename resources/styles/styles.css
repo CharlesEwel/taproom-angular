@@ -5,3 +5,18 @@ h1 {
 .selected {
   color: red;
 }
+
+.currencyinput {
+    border: 1px #ccc solid;
+    padding: 4px;
+}
+.currencyinput input {
+    border: 0;
+}
+input:focus {
+    outline-width: 0;
+}
+
+.expensive {
+  height: 30px;
+}

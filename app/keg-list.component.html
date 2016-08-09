@@ -1,5 +1,18 @@
+<select (change)="onPintsChange($event.target.value)" class="filter">
+  <option value="all">Show All</option>
+  <option value="near-empty">Show Nearly Empty</option>
+</select>
+<p>Sort By</p>
+<select (change)="onSortChange($event.target.value)" class="filter">
+  <option value="0">Order Tapped</option>
+  <option value="1">Brand</option>
+  <option value="2">Name</option>
+  <option value="3">Price</option>
+  <option value="4">Alcohol Content</option>
+
+</select>
 <keg-display
-  *ngFor="#currentKeg of kegList"
+  *ngFor="#currentKeg of kegList | pints:filterPints | sort:filterSort"
   (click)="kegClicked(currentKeg)"
   [class.selected]="currentKeg === selectedKeg"
   [keg]="currentKeg">
