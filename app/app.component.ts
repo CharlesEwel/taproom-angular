@@ -18,10 +18,13 @@ import { KegListComponent } from './keg-list.component';
 export class AppComponent{
   public kegs: Keg[] = [];
   constructor() {
+    var lastWednesdayEvening: Date = new Date(2016, 7, 3, 21, 10);
+    var lastFridayAfternoon: Date = new Date(2016, 7, 5, 16, 30);
+    var lastSaturdayNight: Date = new Date(2016, 7, 6, 19, 45);
     this.kegs = [
-      new Keg("Dead Guy Ale", "Rogue", 10, .07, 0),
-      new Keg("Kingpin Red Ale", "Bridgeport", 3.50, 0.06, 1),
-      new Keg("Total Domination", "Ninkasi", 3.50, 0.06, 2)
+      new Keg("Dead Guy Ale", "Rogue", 10, .07, lastWednesdayEvening, 0),
+      new Keg("Kingpin Red Ale", "Bridgeport", 3.50, 0.06, lastFridayAfternoon, 1),
+      new Keg("Total Domination", "Ninkasi", 3.50, 0.06, lastSaturdayNight, 2)
     ];
   }
 }

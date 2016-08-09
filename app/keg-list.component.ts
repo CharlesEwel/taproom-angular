@@ -29,8 +29,9 @@ export class KegListComponent {
     this.onKegSelect.emit(clickedKeg);
   }
   createKeg(name: string, brand: string, price: number, ABV: number): void {
+    var tapDate: Date = new Date();
     this.kegList.push(
-      new Keg(name, brand, price, ABV, this.kegList.length)
+      new Keg(name, brand, price, ABV, tapDate, this.kegList.length)
     );
   }
   onPintsChange(filterOption) {

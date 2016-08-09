@@ -20,3 +20,11 @@ input:focus {
 .expensive {
   height: 30px;
 }
+
+.float-right{
+  float: right;
+}
+
+.float-left{
+  float: left;
+}
